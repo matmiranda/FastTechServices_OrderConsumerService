@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer-order-deployment
+  labels:
+    app: consumer-order
+    tier: backend
+    environment: production
+  annotations:
+    description: "Microsserviço responsável por criar contatos"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumer-order
+  template:
+    metadata:
+      labels:
+        app: consumer-order
+        tier: backend
+        environment: production
+      annotations:
+        description: "Pod do microsserviço consumer-order"
+    spec:
+      containers:
+        - name: consumer-order
+          image: containerfiap.azurecr.io/consumer-order:latest
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: consumer-order-configmap
+          volumeMounts:
+            - name: consumer-order-volume
+              mountPath: /app/logs/consumer-order
+      imagePullSecrets:
+        - name: acr-auth
+      volumes:
+        - name: consumer-order-volume
+          persistentVolumeClaim:
+            claimName: consumer-order-persistent-volume-claim
