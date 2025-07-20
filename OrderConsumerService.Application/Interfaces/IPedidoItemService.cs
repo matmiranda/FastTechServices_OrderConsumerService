@@ -1,4 +1,4 @@
-﻿namespace OrderConsumeService.Application.Interfaces
+﻿namespace OrderConsumerService.Application.Interfaces
 {
     public interface IPedidoItemService
     {

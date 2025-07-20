@@ -1,9 +1,9 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
-using OrderConsumeService.Domain.Entities;
+using OrderConsumerService.Domain.Entities;
 
-namespace OrderConsumeService.Infrastructure.Persistence
+namespace OrderConsumerService.Infrastructure.Persistence
 {
     public class PedidoItemRepository(IConfiguration configuration) : IPedidoItemRepository
     {

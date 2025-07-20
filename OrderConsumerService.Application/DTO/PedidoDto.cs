@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace OrderConsumeService.Application.DTO
+namespace OrderConsumerService.Application.DTO
 {
     public class PedidoDto
     {

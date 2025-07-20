@@ -1,15 +1,15 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using OrderConsumeService.Application.DTO;
-using OrderConsumeService.Application.Interfaces;
+using OrderConsumerService.Application.DTO;
+using OrderConsumerService.Application.Interfaces;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace OrderConsumeService.Infrastructure.Messaging
+namespace OrderConsumerService.Infrastructure.Messaging
 {
     public class RabbitMQConsumer : BackgroundService
     {

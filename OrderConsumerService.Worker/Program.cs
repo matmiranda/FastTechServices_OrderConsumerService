@@ -1,8 +1,8 @@
 ﻿using OrderConsumerService.Worker;
-using OrderConsumeService.Infrastructure.Persistence;
-using OrderConsumeService.Application.Interfaces;
-using OrderConsumeService.Infrastructure.Services;
-using OrderConsumeService.Infrastructure.Messaging;
+using OrderConsumerService.Infrastructure.Persistence;
+using OrderConsumerService.Application.Interfaces;
+using OrderConsumerService.Infrastructure.Services;
+using OrderConsumerService.Infrastructure.Messaging;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()

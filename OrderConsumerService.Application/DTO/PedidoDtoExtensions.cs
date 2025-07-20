@@ -1,4 +1,4 @@
-﻿namespace OrderConsumeService.Application.DTO
+﻿namespace OrderConsumerService.Application.DTO
 {
     public static class PedidoDtoExtensions
     {

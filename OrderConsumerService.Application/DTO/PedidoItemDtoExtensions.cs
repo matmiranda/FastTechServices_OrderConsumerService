@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderConsumeService.Application.DTO
+namespace OrderConsumerService.Application.DTO
 {
     public static class PedidoItemDtoExtensions
     {

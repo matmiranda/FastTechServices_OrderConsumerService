@@ -1,6 +1,6 @@
-﻿using OrderConsumeService.Domain.Entities;
+﻿using OrderConsumerService.Domain.Entities;
 
-namespace OrderConsumeService.Infrastructure.Persistence
+namespace OrderConsumerService.Infrastructure.Persistence
 {
     public interface IPedidoItemRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace OrderConsumeService.Domain.Entities
+﻿namespace OrderConsumerService.Domain.Entities
 {
     public class Pedido
     {

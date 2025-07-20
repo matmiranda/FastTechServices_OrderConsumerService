@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrderConsumeService.Application\OrderConsumeService.Application.csproj" />
-    <ProjectReference Include="..\OrderConsumeService.Domain\OrderConsumeService.Domain.csproj" />
+    <ProjectReference Include="..\OrderConsumerService.Application\OrderConsumerService.Application.csproj" />
+    <ProjectReference Include="..\OrderConsumerService.Domain\OrderConsumerService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

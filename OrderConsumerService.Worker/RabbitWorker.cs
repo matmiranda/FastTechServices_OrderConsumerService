@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using OrderConsumeService.Infrastructure.Messaging;
+using OrderConsumerService.Infrastructure.Messaging;
 
 namespace OrderConsumerService.Worker;
 

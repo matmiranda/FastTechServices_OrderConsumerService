@@ -5,11 +5,11 @@ VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumerService.Worker", "OrderConsumerService.Worker\OrderConsumerService.Worker.csproj", "{6001EE6C-06DE-42B1-A112-06FD09FA483F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumeService.Application", "OrderConsumeService.Application\OrderConsumeService.Application.csproj", "{44CB207D-5CE3-483C-98D5-D679AFE01FF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumerService.Application", "OrderConsumerService.Application\OrderConsumerService.Application.csproj", "{44CB207D-5CE3-483C-98D5-D679AFE01FF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumeService.Domain", "OrderConsumeService.Domain\OrderConsumeService.Domain.csproj", "{0AF534DE-0F99-4BBC-B2FB-59BA14DCE85F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumerService.Domain", "OrderConsumerService.Domain\OrderConsumerService.Domain.csproj", "{0AF534DE-0F99-4BBC-B2FB-59BA14DCE85F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumeService.Infrastructure", "OrderConsumeService.Infrastructure\OrderConsumeService.Infrastructure.csproj", "{DBC3ABD0-AF72-4EE9-ABEE-EB85E39036D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumerService.Infrastructure", "OrderConsumerService.Infrastructure\OrderConsumerService.Infrastructure.csproj", "{DBC3ABD0-AF72-4EE9-ABEE-EB85E39036D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderConsumerService.Test", "OrderConsumerService.Test\OrderConsumerService.Test.csproj", "{34D20E3F-547E-47DE-AF47-5D253AECFBEE}"
 EndProject

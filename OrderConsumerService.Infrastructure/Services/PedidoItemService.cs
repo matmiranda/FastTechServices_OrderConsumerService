@@ -1,13 +1,13 @@
-﻿using OrderConsumeService.Application.Interfaces;
-using OrderConsumeService.Domain.Entities;
-using OrderConsumeService.Infrastructure.Persistence;
+﻿using OrderConsumerService.Application.Interfaces;
+using OrderConsumerService.Domain.Entities;
+using OrderConsumerService.Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrderConsumeService.Infrastructure.Services
+namespace OrderConsumerService.Infrastructure.Services
 {
     public class PedidoItemService : IPedidoItemService
     {
