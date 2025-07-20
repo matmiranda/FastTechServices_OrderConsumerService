@@ -1,0 +1,17 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/FastTechServices_OrderConsumerService/CopilotIndices/17.14.878.3237
+/.vs
+/OrderConsumerService/.vs
+/OrderConsumerService/OrderConsumerService.Test/bin/Debug/net9.0
+/OrderConsumerService/OrderConsumerService.Test/obj
+/OrderConsumerService/OrderConsumerService.Worker/bin/Debug/net9.0
+/OrderConsumerService/OrderConsumerService.Worker/obj
+/OrderConsumerService/OrderConsumeService.Application/bin/Debug/net9.0
+/OrderConsumerService/OrderConsumeService.Application/obj
+/OrderConsumerService/OrderConsumeService.Domain/bin/Debug/net9.0
+/OrderConsumerService/OrderConsumeService.Domain/obj
+/OrderConsumerService/OrderConsumeService.Infrastructure/bin/Debug/net9.0
+/OrderConsumerService/OrderConsumeService.Infrastructure/obj
