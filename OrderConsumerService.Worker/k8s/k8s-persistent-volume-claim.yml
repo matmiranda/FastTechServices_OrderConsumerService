@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: consumer-order-persistent-volume-claim
+  name: order-consumer-persistent-volume-claim
   labels:
     app: consumer-order
     tier: backend

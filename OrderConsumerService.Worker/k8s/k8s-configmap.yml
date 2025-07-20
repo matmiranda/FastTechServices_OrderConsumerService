@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: consumer-order-configmap
+  name: order-consumer-configmap
   labels:
     app: consumer-order
     tier: backend

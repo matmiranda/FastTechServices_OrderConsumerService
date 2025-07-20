@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: consumer-order-service
+  name: order-consumer-service
   labels:
     app: consumer-order
     tier: backend

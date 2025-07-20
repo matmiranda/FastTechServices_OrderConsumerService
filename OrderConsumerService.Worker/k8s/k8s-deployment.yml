@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: consumer-order-deployment
+  name: order-consumer-deployment
   labels:
     app: consumer-order
     tier: backend
@@ -29,13 +29,13 @@ spec:
             - containerPort: 80
           envFrom:
             - configMapRef:
-                name: consumer-order-configmap
+                name: order-consumer-configmap
           volumeMounts:
-            - name: consumer-order-volume
+            - name: order-consumer-volume
               mountPath: /app/logs/consumer-order
       imagePullSecrets:
         - name: acr-auth
       volumes:
-        - name: consumer-order-volume
+        - name: order-consumer-volume
           persistentVolumeClaim:
-            claimName: consumer-order-persistent-volume-claim
+            claimName: order-consumer-persistent-volume-claim
