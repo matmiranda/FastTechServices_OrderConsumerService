@@ -66,11 +66,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/consumer-order:latest -f OrderConsumerService.Worker/Dockerfile .
+          docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/k8s:latest -f OrderConsumerService.Worker/Dockerfile .
 
       - name: Push Docker image to ACR
         run: |
-          docker push ${{ secrets.ACR_LOGIN_SERVER }}/consumer-order:latest
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/k8s:latest
 
       - name: Set AKS context
         uses: azure/aks-set-context@v3
@@ -81,29 +81,29 @@ jobs:
       - name: Update Kubernetes Resources
         run: |
           # Aplica ConfigMap (cria ou atualiza se necessário)
-          kubectl apply -f OrderConsumerService.Worker/k8s/consumer-order-configmap.yml
+          kubectl apply -f OrderConsumerService.Worker/k8s/k8s-configmap.yml
 
           # Aplica Deployment (cria ou atualiza se necessário)
-          kubectl apply -f OrderConsumerService.Worker/k8s/consumer-order-deployment.yml
+          kubectl apply -f OrderConsumerService.Worker/k8s/k8s-deployment.yml
 
           # Aplica PVC e PV (apenas cria ou atualiza, sem deletar)
-          kubectl apply -f OrderConsumerService.Worker/k8s/consumer-order-persistent-volume.yml
-          kubectl apply -f OrderConsumerService.Worker/k8s/consumer-order-persistent-volume-claim.yml
+          kubectl apply -f OrderConsumerService.Worker/k8s/k8s-persistent-volume.yml
+          kubectl apply -f OrderConsumerService.Worker/k8s/k8s-persistent-volume-claim.yml
 
           # Aplica Service (cria ou atualiza se necessário)
-          kubectl apply -f OrderConsumerService.Worker/k8s/consumer-order-service.yml
+          kubectl apply -f OrderConsumerService.Worker/k8s/k8s-service.yml
 
           # Espera o rollout do Deployment para garantir que a atualização foi bem-sucedida
-          kubectl rollout status deployment/consumer-order-deployment
+          kubectl rollout status deployment/k8s-deployment
       
       - name: Update AKS Deployment with new image
         uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            OrderConsumerService.Worker/k8s/consumer-order-deployment.yml
-            OrderConsumerService.Worker/k8s/consumer-order-service.yml
+            OrderConsumerService.Worker/k8s/k8s-deployment.yml
+            OrderConsumerService.Worker/k8s/k8s-service.yml
           images: |
-            ${{ secrets.ACR_LOGIN_SERVER }}/consumer-order:latest
+            ${{ secrets.ACR_LOGIN_SERVER }}/k8s:latest
           imagepullsecrets: |
             acr-auth
 
