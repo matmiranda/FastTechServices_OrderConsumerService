@@ -82,7 +82,7 @@ namespace OrderConsumerService.Infrastructure.Messaging
                         if (pedido != null)
                         {
                             using var scope = _serviceProvider.CreateScope();
-                            var pedidoService = scope.ServiceProvider.GetRequiredService<IPedidoService>();
+                    var orderService = scope.ServiceProvider.GetRequiredService<IOrderService>();
 
                             var pedidoEntity = pedido.ToEntity();
                             await pedidoService.EnviarPedidoAsync(pedidoEntity);
