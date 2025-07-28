@@ -78,7 +78,7 @@ namespace OrderConsumerService.Infrastructure.Persistence
         status = @Status,
         cancel_reason = @MotivoCancelamento,
         updated_at = @AtualizadoEm
-    WHERE id = @PedidoId AND customer_id = @ClienteId;";
+    WHERE id = @PedidoId;";
 
             using var connection = new MySqlConnection(_connectionString);
             await connection.OpenAsync();
@@ -88,7 +88,6 @@ namespace OrderConsumerService.Infrastructure.Persistence
                 await connection.ExecuteAsync(updateQuery, new
                 {
                     PedidoId = pedido.Id,
-                    ClienteId = pedido.CustomerId,
                     Status = pedido.Status.ToString(),
                     MotivoCancelamento = pedido.CancelReason,
                     AtualizadoEm = DateTime.UtcNow.AddHours(-3)
