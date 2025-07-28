@@ -31,9 +31,6 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddScoped<IPedidoRepository, PedidoRepository>();
         services.AddScoped<IPedidoService, PedidoService>();
 
-        services.AddScoped<IPedidoItemRepository, PedidoItemRepository>();
-        services.AddScoped<IPedidoItemService, PedidoItemService>();
-
         // Registrando o RabbitMQConsumer como Singleton e o Worker como HostedService
         services.AddSingleton<RabbitMQConsumer>();
         services.AddHostedService<RabbitWorker>();

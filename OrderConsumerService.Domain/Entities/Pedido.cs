@@ -2,13 +2,15 @@
 {
     public class Pedido
     {
-        public decimal Id { get; set; }
-        public decimal ClienteId { get; set; }
-        public string TipoPedido { get; set; } = string.Empty;
+        public ulong Id { get; set; }
+        public ulong CustomerId { get; set; }
+        public DeliveryMethod DeliveryMethod { get; set; }
         public decimal Total { get; set; }
-        public string Status { get; set; } = string.Empty;
-        public string? MotivoCancelamento { get; set; }
-        public DateTime DataCriacao { get; set; } = DateTime.Now;
-        public DateTime? DataAlteracao { get; set; } = DateTime.Now;
+        public required string Status { get; set; }
+        public string? CancelReason { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public List<PedidoItem> Items { get; set; } = new();
     }
+
 }
